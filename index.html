@@ -1,63 +1,97 @@
+<!doctype html>
 <html lang="en">
-<section id="reserve" class="band">
-<div class="container">
-<h2>Reserve a Table at Drinks & Dragons</h2>
-<form id="reserveForm" action="#" method="post">
-<label for="party">Party Size</label>
-<input id="party" name="party" type="number" min="1" max="12" required />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Drinks & Dragons Café</title>
+  <meta name="description" content="Drinks & Dragons Café in Bloomington — a cozy hub for tabletop role-playing games, board games, and legendary lattes." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-wrap">
+      <a href="#hero" class="logo">
+        <img src="images/drinks-dragons-logo.png" alt="Drinks & Dragons café logo" />
+      </a>
+      <nav>
+        <ul class="nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#reserve">Reserve</a></li>
+          <li><a href="#newsletter">Join the Guild</a></li>
+          <li><a href="#findus">Find Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <section id="hero">
+      <div class="container">
+        <h1>Drinks & Dragons Café</h1>
+        <p class="tagline">Bloomington’s cozy hub for D&D one-shots, board games, and legendary lattes.</p>
+        <img src="images/drinks-dragons-hero.jpg" alt="Players gathered around a table with dice and drinks at Drinks & Dragons café" />
+        <p><a class="button" href="#reserve">Reserve a Table</a></p>
+      </div>
+    </section>
 
-<label for="date">Date</label>
-<input id="date" name="date" type="date" required />
+    <section id="events">
+      <div class="container">
+        <h2>Upcoming Game Nights</h2>
+        <img src="images/drinks-dragons-events.jpg" alt="Board games and miniatures set up for an event at Drinks & Dragons café" />
+        <ul>
+          <li><strong>Tuesday TTRPG Night:</strong> 6–9pm — D&D 5e one-shots for all levels.</li>
+          <li><strong>Board Game Bash:</strong> Saturdays 1–5pm — learn-to-play and free play.</li>
+          <li><strong>Painting & Minis:</strong> Mondays 5–8pm — bring your minis, supplies available.</li>
+        </ul>
+      </div>
+    </section>
 
+    <section id="reserve">
+      <div class="container">
+        <h2>Reserve a Table</h2>
+        <form>
+          <label for="party">Party Size:</label>
+          <input id="party" type="number" min="1" max="12" required>
+          <label for="date">Date:</label>
+          <input id="date" type="date" required>
+          <label for="email">Email:</label>
+          <input id="email" type="email" required>
+          <button type="submit">Request Reservation</button>
+        </form>
+      </div>
+    </section>
 
-<label for="email">Email</label>
-<input id="email" name="email" type="email" autocomplete="email" required />
+    <section id="newsletter">
+      <div class="container">
+        <h2>Join the Guild</h2>
+        <img src="images/drinks-dragons-newsletter.jpg" alt="Coffee mug and dice representing the Drinks & Dragons guild newsletter" />
+        <p>Sign up to hear about events, one-shots, and exclusive discounts!</p>
+        <form>
+          <label for="news-email">Email:</label>
+          <input id="news-email" type="email" required>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </section>
 
+    <section id="findus">
+      <div class="container">
+        <h2>Find Us</h2>
+        <address>
+          123 Arcana Ave, Bloomington, IN 47401<br>
+          Open Tue–Sun · Noon–10pm
+        </address>
+        <p><a class="button" href="https://maps.google.com/?q=123+Arcana+Ave+Bloomington+IN" target="_blank">Open in Maps</a></p>
+      </div>
+    </section>
+  </main>
 
-<button type="submit">Submit</button>
-<p class="fineprint">This is a class demo. Submissions are not collected or stored.</p>
-</form>
-</div>
-</section>
-
-
-<section id="newsletter" class="band">
-<div class="container">
-<h2>Join the Drinks & Dragons Guild</h2>
-<form id="newsForm" action="#" method="post">
-<label for="news-email">Email</label>
-<input id="news-email" name="news-email" type="email" autocomplete="email" required />
-<button type="submit">Sign Up</button>
-<p class="fineprint">This is a class demo. Submissions are not collected or stored.</p>
-</form>
-<figure class="newsletter-figure">
-<img src="images/drinks-dragons-newsletter.jpg" width="1000" height="562"
-alt="Close-up of dice and a character sheet at Drinks & Dragons in Bloomington." />
-<figcaption>Never miss a quest or a game night.</figcaption>
-</figure>
-</div>
-</section>
-
-
-<section id="findus" class="band">
-<div class="container">
-<h2>Find Drinks & Dragons</h2>
-<p>123 Arcana Ave, Bloomington, IN 47401</p>
-<p><a class="button outline" href="https://maps.google.com/?q=123+Arcana+Ave+Bloomington+IN" target="_blank" rel="noopener">Open in Maps</a></p>
-</div>
-</section>
-</main>
-
-
-<footer>
-<div class="container">
-<p>&copy; <span id="year"></span> Drinks & Dragons • "Roll high, sip higher."</p>
-<p class="fineprint">Looking for more? Our code is on GitHub: <a href="https://github.com/Wmontgom1011/Drinks-Dragons-part-1.io">Drinks & Dragons repo</a></p>
-</div>
-</footer>
-
-
-<script src="script.js"></script>
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Drinks & Dragons Café — “Roll high, sip higher.”</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
