@@ -1,0 +1,59 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial, sans-serif; margin:0; color:#222; background:#fff; line-height:1.7; font-size:18px}
+.container{width:92%; max-width:900px; margin:0 auto; padding:1.5rem 0}
+
+
+.skip-link{position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden}
+.skip-link:focus{position:static; width:auto; height:auto; background:#ffcb3a; color:#222; padding:.5rem .75rem}
+
+
+header{background:#333; color:#fff}
+.header-wrap{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.logo img{display:block; height:auto}
+nav ul{list-style:none; display:flex; gap:1rem; margin:0; padding:0}
+nav a{color:#fff; text-decoration:none; padding:.75rem 1rem; display:inline-block; min-height:46px; line-height:1.5}
+nav a:hover, nav a:focus{text-decoration:underline; outline:2px solid transparent}
+
+
+.band{border-top:1px solid #eee}
+#hero{background:#f6f7ff}
+.tagline{color:#444}
+.at-a-glance{margin:0 0 1rem 1.25rem}
+.at-a-glance li{margin:.25rem 0}
+
+
+img{max-width:100%; height:auto; display:block}
+figure{margin:1rem 0}
+figcaption{font-size:.9rem; color:#555}
+
+
+h1{font-size:28px; margin:.25rem 0 .5rem}
+h2{font-size:24px; margin:0 0 .5rem}
+h3{font-size:20px; margin:.5rem 0 .25rem}
+p{margin:.6rem 0}
+.list{padding-left:1.25rem}
+.list li{margin:.6rem 0}
+
+
+a{color:#1e4fb4} 
+a:focus{outline:3px solid rgba(30,79,180,.35)}
+
+
+form{display:grid; gap:.75rem; max-width:420px}
+input, button{padding:.7rem .8rem; font-size:1rem; border:1px solid #888; border-radius:4px}
+button{background:#4a67d1; color:#fff; border:0; cursor:pointer}
+button:hover, button:focus{background:#3d57b3}
+.button{display:inline-block; background:#ffcb3a; color:#222; padding:.7rem 1rem; border-radius:4px; text-decoration:none}
+.button.outline{background:transparent; border:2px solid #ffcb3a}
+
+
+.fineprint{font-size:.9rem; color:#555}
+
+
+@media (max-width:700px){
+nav ul{flex-wrap:wrap}
+}
+
+
+html, body{overflow-x:hidden}
