@@ -3,17 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Drinks & Dragons Café</title>
-  <meta name="description" content="Drinks & Dragons Café in Bloomington — a cozy hub for tabletop role-playing games, board games, and legendary lattes." />
+  <title>Drinks & Dragons – Board Games & TTRPG Nights in Bloomington</title> <!-- keyword in title -->
+  <meta name="description" content="Drinks & Dragons — Bloomington's cozy hub for board games and TTRPG one-shots. Reserve a table, see events, join the guild, and find us." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+  <!-- Skip link (keyboard support) -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header role="banner">
     <div class="container header-wrap">
-      <a href="#hero" class="logo">
-        <img src="images/logo.png" alt="Drinks & Dragons café logo" />
+      <!-- Header logo links home -->
+      <a class="logo" href="#hero" aria-label="Drinks & Dragons home">
+        <img src="images/drinks-dragons-logo.png"
+             alt="Drinks & Dragons logo — flat crimson lettering with dragon beneath Dragons" width="180" height="48" />
       </a>
-      <nav>
+
+      <!-- Navigation (46px+ targets, literal labels) -->
+      <nav aria-label="Primary">
         <ul class="nav">
           <li><a href="#hero">Home</a></li>
           <li><a href="#events">Events</a></li>
@@ -25,73 +33,163 @@
     </div>
   </header>
 
-  <main>
-    <section id="hero">
+  <main id="main">
+    <!-- HERO (H1, bullets, CTA) -->
+    <section id="hero" class="band">
       <div class="container">
-        <h1>Drinks & Dragons Café</h1>
-        <p class="tagline">Bloomington’s cozy hub for D&D one-shots, board games, and legendary lattes.</p>
-        <img src="images/Tavern_Scene.png" alt="Players gathered around a table with dice and drinks at Drinks & Dragons café" />
-        <p><a class="button" href="#reserve">Reserve a Table</a></p>
-      </div>
-    </section>
-
-    <section id="events">
-      <div class="container">
-        <h2>Upcoming Game Nights</h2>
-        <img src="images/drinks-dragons-events.png" alt="Board games and miniatures set up for an event at Drinks & Dragons café" />
-        <ul>
-          <li><strong>Tuesday TTRPG Night:</strong> 6–9pm — D&D 5e one-shots for all levels.</li>
-          <li><strong>Board Game Bash:</strong> Saturdays 1–5pm — learn-to-play and free play.</li>
-          <li><strong>Painting & Minis:</strong> Mondays 5–8pm — bring your minis, supplies available.</li>
+        <h1>Drinks & Dragons – Board Games & TTRPG in Bloomington</h1> <!-- keyword in H1 -->
+        <p class="tagline">Roll high, sip higher — cozy game nights, easy reservations, friendly community.</p>
+        <ul class="at-a-glance"> <!-- list/call-outs -->
+          <li>Weekly D&amp;D one-shots (new players welcome)</li>
+          <li>Staff-led board game demos</li>
+          <li>Reserve a table for your party</li>
         </ul>
+
+        <!-- Image 1 -->
+        <figure>
+          <img src="images/drinks-dragons-hero.jpg"
+               alt="Players at Drinks & Dragons café rolling dice around drinks, books, and a game board" width="1200" height="600" />
+          <figcaption>Game night energy at Drinks & Dragons.</figcaption>
+        </figure>
+
+        <p><a class="button button-red" href="#reserve">Reserve a Table</a></p> <!-- CTA -->
       </div>
     </section>
 
-    <section id="reserve">
+    <!-- EVENTS (H2/H3, list, image) -->
+    <section id="events" class="band">
       <div class="container">
-        <h2>Reserve a Table</h2>
-        <form>
-          <label for="party">Party Size:</label>
-          <input id="party" type="number" min="1" max="12" required>
-          <label for="date">Date:</label>
-          <input id="date" type="date" required>
-          <label for="email">Email:</label>
-          <input id="email" type="email" required>
-          <button type="submit">Request Reservation</button>
+        <h2>Drinks & Dragons Events</h2> <!-- keyword in H2 -->
+
+        <!-- Image 2 -->
+        <figure>
+          <img src="images/drinks-dragons-events.jpg"
+               alt="Board games and miniatures set up for an event at Drinks & Dragons café" width="1000" height="562" />
+          <figcaption>Weekly highlights you can join anytime.</figcaption>
+        </figure>
+
+        <ul class="list">
+          <li><strong>Tuesday TTRPG Night</strong> — <time datetime="2025-05-06T18:00">Tuesdays, 6–9pm</time></li>
+          <li><strong>Board Game Bash</strong> — <time datetime="2025-05-10T13:00">Saturdays, 1–5pm</time></li>
+          <li><strong>Painting & Minis</strong> — <time datetime="2025-05-12T17:00">Alt Mondays, 5–8pm</time></li>
+        </ul>
+
+        <p class="callout">Tip: Seats go fast — <a href="#reserve">reserve a table</a> for up to 12.</p>
+      </div>
+    </section>
+
+    <!-- HOURS (table requirement) -->
+    <section id="hours" class="band">
+      <div class="container">
+        <h2>Drinks & Dragons Hours</h2>
+        <table class="hours-table" aria-describedby="hours-note">
+          <thead>
+            <tr><th scope="col">Day</th><th scope="col">Open</th><th scope="col">Close</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Tue</th><td>12:00 PM</td><td>10:00 PM</td></tr>
+            <tr><th scope="row">Wed</th><td>12:00 PM</td><td>10:00 PM</td></tr>
+            <tr><th scope="row">Thu</th><td>12:00 PM</td><td>10:00 PM</td></tr>
+            <tr><th scope="row">Fri</th><td>12:00 PM</td><td>11:00 PM</td></tr>
+            <tr><th scope="row">Sat</th><td>12:00 PM</td><td>11:00 PM</td></tr>
+            <tr><th scope="row">Sun</th><td>12:00 PM</td><td>8:00 PM</td></tr>
+            <tr><th scope="row">Mon</th><td colspan="2">Closed</td></tr>
+          </tbody>
+        </table>
+        <p id="hours-note" class="fineprint">Holiday hours may vary.</p>
+      </div>
+    </section>
+
+    <!-- RESERVE FORM (labels, validation, success/error messages) -->
+    <section id="reserve" class="band">
+      <div class="container">
+        <h2>Reserve a Table at Drinks & Dragons</h2> <!-- keyword in H2 -->
+        <form id="reserveForm" action="#" method="post" novalidate aria-describedby="reserve-note">
+          <div class="form-field">
+            <label for="party">Party Size</label>
+            <input id="party" name="party" type="number" min="1" max="12" required />
+            <span class="error" id="party-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required />
+            <span class="error" id="date-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <span class="error" id="email-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="button button-red">Submit</button>
+          <p class="success" id="reserve-success" aria-live="polite" hidden>Reservation request sent! Check your inbox.</p>
+          <p class="fineprint" id="reserve-note">Class demo: submissions aren’t stored.</p>
         </form>
       </div>
     </section>
 
-    <section id="newsletter">
+    <!-- NEWSLETTER (form + image 3) -->
+    <section id="newsletter" class="band">
       <div class="container">
-        <h2>Join the Guild</h2>
-        <img src="images/drinks-dragons-newsletter.png" alt="Coffee mug and dice representing the Drinks & Dragons guild newsletter" />
-        <p>Sign up to hear about events, one-shots, and exclusive discounts!</p>
-        <form>
-          <label for="news-email">Email:</label>
-          <input id="news-email" type="email" required>
-          <button type="submit">Sign Up</button>
+        <h2>Join the Drinks & Dragons Guild</h2> <!-- keyword in H2 -->
+
+        <!-- Image 3 -->
+        <figure>
+          <img src="images/drinks-dragons-newsletter.jpg"
+               alt="Glossy black mug and detailed polyhedral dice representing the Drinks & Dragons guild newsletter" width="1000" height="562" />
+          <figcaption>Never miss a quest or a game night.</figcaption>
+        </figure>
+
+        <form id="newsForm" action="#" method="post" novalidate>
+          <div class="form-field">
+            <label for="news-email">Email</label>
+            <input id="news-email" name="news-email" type="email" autocomplete="email" required />
+            <span class="error" id="news-error" role="alert" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="button button-outline-red">Sign Up</button>
+          <p class="success" id="news-success" aria-live="polite" hidden>Thanks for joining the guild!</p>
+          <p class="fineprint">Class demo: submissions aren’t stored.</p>
         </form>
       </div>
     </section>
 
-    <section id="findus">
+    <!-- FIND US (CTA + external links) -->
+    <section id="findus" class="band">
       <div class="container">
-        <h2>Find Us</h2>
+        <h2>Find Drinks & Dragons</h2> <!-- keyword in H2 -->
         <address>
           123 Arcana Ave, Bloomington, IN 47401<br>
           Open Tue–Sun · Noon–10pm
         </address>
-        <p><a class="button" href="https://maps.google.com/?q=123+Arcana+Ave+Bloomington+IN" target="_blank">Open in Maps</a></p>
+        <p>
+          <a class="button button-outline-red" href="https://maps.google.com/?q=123+Arcana+Ave+Bloomington+IN" target="_blank" rel="noopener">
+            Open in Maps
+          </a>
+        </p>
+
+        <!-- at least 3 external links -->
+        <ul class="external-links list">
+          <li><a href="https://boardgamegeek.com/" target="_blank" rel="noopener">BoardGameGeek</a></li>
+          <li><a href="https://dnd.wizards.com/" target="_blank" rel="noopener">Dungeons & Dragons</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VyVI7cIlY9Q" target="_blank" rel="noopener">SEO in 5 Minutes (YouTube)</a></li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <footer>
+  <!-- FOOTER (backlink) -->
+  <footer role="contentinfo">
     <div class="container">
-      <p>&copy; <span id="year"></span> Drinks & Dragons Café — “Roll high, sip higher.”</p>
+      <p>&copy; <span id="year"></span> Drinks & Dragons — “Roll high, sip higher.”</p>
+      <p class="fineprint">
+        Backlink: our code on GitHub —
+        <a href="https://github.com/Wmontgom1011/Drinks-Dragons-part-1.io" target="_blank" rel="noopener">Project Repository</a>.
+      </p>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
