@@ -41,7 +41,7 @@ function attachFormValidation(formId, fields, successId){
   });
 }
 
-// === Guild form: live validation + success message (use ONLY for #guildForm) ===
+// === Guild form: live validation + real submit to Formspree ===
 const guildForm = document.getElementById('guildForm');
 const formMsg  = document.getElementById('formMessage');
 
@@ -55,13 +55,11 @@ function showError(input, message) {
   err.textContent = message;
   input.setAttribute('aria-invalid', 'true');
 }
-
 function clearError(input) {
   const err = input.nextElementSibling;
   if (err && err.classList.contains('error')) err.textContent = '';
   input.removeAttribute('aria-invalid');
 }
-
 function validateField(input) {
   if (input.validity.valid) { clearError(input); return true; }
   if (input.validity.valueMissing) showError(input, 'This field is required.');
@@ -71,26 +69,42 @@ function validateField(input) {
 }
 
 if (guildForm) {
-  // Live validation (before submit)
+  // live validation
   ['input', 'blur'].forEach(evt => {
     guildForm.addEventListener(evt, e => {
       if (e.target.matches('#name, #email')) validateField(e.target);
     });
   });
 
-  // Submit handler (client-side only)
-  guildForm.addEventListener('submit', e => {
+  guildForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+
     const nameOk  = validateField(guildForm.querySelector('#name'));
     const emailOk = validateField(guildForm.querySelector('#email'));
-    if (!nameOk || !emailOk) { guildForm.querySelector('[aria-invalid="true"]')?.focus(); return; }
+    if (!nameOk || !emailOk) {
+      guildForm.querySelector('[aria-invalid="true"]')?.focus();
+      return;
+    }
 
-    const data = Object.fromEntries(new FormData(guildForm).entries());
-    console.log('Guild signup (demo):', data);
+    try {
+      const resp = await fetch(guildForm.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(guildForm)
+      });
 
-    formMsg.className = 'form-message success';
-    formMsg.textContent = 'Thanks for joining the Guild! Check your inbox for a welcome scroll.';
-    guildForm.reset();
-    guildForm.querySelector('#name')?.focus();
+      if (resp.ok) {
+        formMsg.className = 'form-message success';
+        formMsg.textContent = 'Thanks for joining the Guild! Check your inbox for a welcome scroll.';
+        guildForm.reset();
+        guildForm.querySelector('#name')?.focus();
+      } else {
+        formMsg.className = 'form-message error';
+        formMsg.textContent = 'Hmm, something went wrong. Please try again in a moment.';
+      }
+    } catch (err) {
+      formMsg.className = 'form-message error';
+      formMsg.textContent = 'Network hiccup. Please try again.';
+    }
   });
 }
