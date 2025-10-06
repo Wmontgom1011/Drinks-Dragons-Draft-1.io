@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Events – Drinks & Dragons Café</title>
-  <meta name="description" content="Upcoming events at Drinks & Dragons: D&D one-shots, board game demos, and painting minis." />
+  <title>Menu – Drinks & Dragons Café</title>
+  <meta name="description" content="Browse the Drinks & Dragons menu — from signature coffees to themed cocktails and snacks for game night." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- top of <body> on each page -->
   <a class="skip-link" href="#main">Skip to main content</a>
   <header role="banner">
     <div class="container header-wrap">
@@ -19,8 +20,8 @@
       <nav aria-label="Primary">
         <ul class="nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="events.html" aria-current="page">Events</a></li>
-          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="menu.html" aria-current="page">Menu</a></li>
           <li><a href="guild.html">Guild</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
@@ -31,52 +32,38 @@
   <main id="main">
     <section class="band">
       <div class="container">
-        <h1>Drinks & Dragons Events</h1>
-        <figure>
-          <img src="images/drinks-dragons-events.png"
-               alt="Board games and miniatures set up for an event at Drinks & Dragons café"
-               width="1000" height="562">
-          <figcaption>Weekly highlights you can join anytime.</figcaption>
-        </figure>
+        <h1>Our Menu</h1>
+        <p>Fuel your adventure with themed drinks, hearty snacks, and gamer-friendly bites.</p>
 
-        <h2>Weekly Schedule</h2>
-        <table class="table" aria-describedby="sched-note">
-          <thead>
-            <tr>
-              <th scope="col">Event</th>
-              <th scope="col">When</th>
-              <th scope="col">Details</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">TTRPG One-Shots</th>
-              <td>Tuesdays, 6–9pm</td>
-              <td>Beginner friendly. Drop-in welcome.</td>
-            </tr>
-            <tr>
-              <th scope="row">Board Game Bash</th>
-              <td>Saturdays, 1–5pm</td>
-              <td>Learn-to-play + staff-curated picks.</td>
-            </tr>
-            <tr>
-              <th scope="row">Painting & Minis</th>
-              <td>Alt Mondays, 5–8pm</td>
-              <td>Bring minis. Supplies available.</td>
-            </tr>
-          </tbody>
-        </table>
-        <p id="sched-note" class="fineprint">Schedule subject to change for holidays.</p>
+        <h2>Coffees & Teas</h2>
+        <ul class="list">
+          <li><strong>Critical Cold Brew</strong> — smooth, dark, +1 focus.</li>
+          <li><strong>Mana Matcha</strong> — creamy green tea energy boost.</li>
+          <li><strong>Arcane Latte</strong> — espresso with vanilla-magic swirl.</li>
+        </ul>
+
+        <h2>Specialty Drinks</h2>
+        <ul class="list">
+          <li><strong>Dragon’s Breath</strong> — spiced chai with cinnamon steam.</li>
+          <li><strong>Health Potion</strong> — strawberry lemonade elixir.</li>
+          <li><strong>Mana Potion</strong> — blueberry and mint refresher.</li>
+        </ul>
+
+        <h2>Snacks & Bites</h2>
+        <ul class="list">
+          <li><strong>Dice Bag Nachos</strong> — customizable toppings.</li>
+          <li><strong>Mini Mimic Sliders</strong> — beef or veggie patties with a bite.</li>
+          <li><strong>Gold Piece Cookies</strong> — sweet treasure at session’s end.</li>
+        </ul>
 
         <p class="callout">
-          Want a table locked?
-          <a href="guild.html">Join the Guild</a> or
-          <a class="button button-red" href="guild.html">Reserve via Newsletter</a>
+          Planning a long campaign? <a class="button button-red" href="guild.html">Join the Guild</a> for discounts and pre-order perks.
         </p>
       </div>
     </section>
   </main>
 
+  <!-- bottom of <body> on each page -->
   <footer role="contentinfo">
     <div class="container">
       <p>&copy; <span id="year"></span> Drinks & Dragons — “Roll high, sip higher.”</p>
