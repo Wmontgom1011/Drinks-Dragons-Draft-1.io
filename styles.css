@@ -9,6 +9,11 @@ body {
   line-height: 1.7;        /* ≥ 1.5 */
   font-size: 18px;         /* ≥ 16px (18px ideal) */
 }
+body {
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+  font-family: "Segoe UI", sans-serif;
+}
 
 .container { width: 92%; max-width: 980px; margin: 0 auto; padding: 1.5rem 0; }
 
