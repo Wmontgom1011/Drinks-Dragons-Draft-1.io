@@ -1,195 +1,81 @@
-<!doctype html>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header role="banner">
+  <div class="container header-wrap">
+    <a class="logo" href="index.html" aria-label="Drinks & Dragons home">
+      <img src="images/drinks-dragons-logo.png" width="180" height="48"
+           alt="Drinks & Dragons logo — flat crimson lettering with dragon beneath Dragons">
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="guild.html">Guild</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Drinks & Dragons – Board Games & TTRPG Nights in Bloomington</title> <!-- keyword in title -->
-  <meta name="description" content="Drinks & Dragons — Bloomington's cozy hub for board games and TTRPG one-shots. Reserve a table, see events, join the guild, and find us." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Drinks & Dragons Café – Board Games & TTRPG Nights in Bloomington</title>
+  <meta name="description" content="Welcome to Drinks & Dragons — Bloomington's cozy hub for board games and TTRPG one-shots. See events, reserve a table, join the guild." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Skip link (keyboard support) -->
+  <!-- HEADER (shared) -->
   <a class="skip-link" href="#main">Skip to main content</a>
-
-  <!-- HEADER -->
   <header role="banner">
     <div class="container header-wrap">
-      <!-- Header logo links home -->
-      <a class="logo" href="#hero" aria-label="Drinks & Dragons home">
-        <img src="images/drinks-dragons-logo.png"
-             alt="Drinks & Dragons logo with a red dragon toasting a beer with a dice below it" width="180" height="48" />
+      <a class="logo" href="index.html" aria-label="Drinks & Dragons home">
+        <img src="images/drinks-dragons-logo.png" width="180" height="48" alt="Drinks & Dragons logo — flat crimson lettering with dragon beneath Dragons">
       </a>
-
-      <!-- Navigation (46px+ targets, literal labels) -->
       <nav aria-label="Primary">
         <ul class="nav">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#reserve">Reserve</a></li>
-          <li><a href="#newsletter">Join the Guild</a></li>
-          <li><a href="#findus">Find Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="guild.html">Guild</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- HERO (H1, bullets, CTA) -->
     <section id="hero" class="band">
       <div class="container">
-        <h1>Drinks & Dragons – Board Games & TTRPG in Bloomington</h1> <!-- keyword in H1 -->
-        <p class="tagline">Roll high, sip higher — cozy game nights, easy reservations, friendly community.</p>
-        <ul class="at-a-glance"> <!-- list/call-outs -->
+        <h1>Drinks & Dragons – Board Games & TTRPG in Bloomington</h1>
+        <p class="tagline">Roll high, sip higher — welcoming game nights, easy reservations, friendly community.</p>
+        <ul class="at-a-glance">
           <li>Weekly D&amp;D one-shots (new players welcome)</li>
           <li>Staff-led board game demos</li>
           <li>Reserve a table for your party</li>
         </ul>
-
-        <!-- Image 1 -->
         <figure>
-          <img src="images/drinks-dragons-hero.png"
-               alt="Players at Drinks & Dragons café rolling dice around drinks, books, and a game board" width="1200" height="600" />
+          <img src="images/drinks-dragons-hero.jpg" alt="Players at Drinks & Dragons café rolling dice around drinks, books, and a game board" width="1200" height="600">
           <figcaption>Game night energy at Drinks & Dragons.</figcaption>
         </figure>
-
-        <p><a class="button button-red" href="#reserve">Reserve a Table</a></p> <!-- CTA -->
-      </div>
-    </section>
-
-    <!-- EVENTS (H2/H3, list, image) -->
-    <section id="events" class="band">
-      <div class="container">
-        <h2>Drinks & Dragons Events</h2> <!-- keyword in H2 -->
-
-        <!-- Image 2 -->
-        <figure>
-          <img src="images/drinks-dragons-events.png"
-               alt="Board games and miniatures set up for an event at Drinks & Dragons café" width="1000" height="562" />
-          <figcaption>Weekly highlights you can join anytime.</figcaption>
-        </figure>
-
-        <ul class="list">
-          <li><strong>Tuesday TTRPG Night</strong> — <time datetime="2025-05-06T18:00">Tuesdays, 6–9pm</time></li>
-          <li><strong>Board Game Bash</strong> — <time datetime="2025-05-10T13:00">Saturdays, 1–5pm</time></li>
-          <li><strong>Painting & Minis</strong> — <time datetime="2025-05-12T17:00">Alt Mondays, 5–8pm</time></li>
-        </ul>
-
-        <p class="callout">Tip: Seats go fast — <a href="#reserve">reserve a table</a> for up to 12.</p>
-      </div>
-    </section>
-
-    <!-- HOURS (table requirement) -->
-    <section id="hours" class="band">
-      <div class="container">
-        <h2>Drinks & Dragons Hours</h2>
-        <table class="hours-table" aria-describedby="hours-note">
-          <thead>
-            <tr><th scope="col">Day</th><th scope="col">Open</th><th scope="col">Close</th></tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">Tue</th><td>12:00 PM</td><td>10:00 PM</td></tr>
-            <tr><th scope="row">Wed</th><td>12:00 PM</td><td>10:00 PM</td></tr>
-            <tr><th scope="row">Thu</th><td>12:00 PM</td><td>10:00 PM</td></tr>
-            <tr><th scope="row">Fri</th><td>12:00 PM</td><td>1:00 AM</td></tr>
-            <tr><th scope="row">Sat</th><td>12:00 PM</td><td>1:00 AM</td></tr>
-            <tr><th scope="row">Sun</th><td>12:00 PM</td><td>8:00 PM</td></tr>
-            <tr><th scope="row">Mon</th><td colspan="2">Closed</td></tr>
-          </tbody>
-        </table>
-        <p id="hours-note" class="fineprint">Holiday hours may vary.</p>
-      </div>
-    </section>
-
-    <!-- RESERVE FORM (labels, validation, success/error messages) -->
-    <section id="reserve" class="band">
-      <div class="container">
-        <h2>Reserve a Table at Drinks & Dragons</h2> <!-- keyword in H2 -->
-        <form id="reserveForm" action="#" method="post" novalidate aria-describedby="reserve-note">
-          <div class="form-field">
-            <label for="party">Party Size</label>
-            <input id="party" name="party" type="number" min="1" max="12" required />
-            <span class="error" id="party-error" role="alert" aria-live="polite"></span>
-          </div>
-
-          <div class="form-field">
-            <label for="date">Date</label>
-            <input id="date" name="date" type="date" required />
-            <span class="error" id="date-error" role="alert" aria-live="polite"></span>
-          </div>
-
-          <div class="form-field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
-            <span class="error" id="email-error" role="alert" aria-live="polite"></span>
-          </div>
-
-          <button type="submit" class="button button-red">Submit</button>
-          <p class="success" id="reserve-success" aria-live="polite" hidden>Reservation request sent! Check your inbox.</p>
-          <p class="fineprint" id="reserve-note">Class demo: submissions aren’t stored.</p>
-        </form>
-      </div>
-    </section>
-
-    <!-- NEWSLETTER (form + image 3) -->
-    <section id="newsletter" class="band">
-      <div class="container">
-        <h2>Join the Drinks & Dragons Guild</h2> <!-- keyword in H2 -->
-
-        <!-- Image 3 -->
-        <figure>
-          <img src="images/drinks-dragons-newsletter.png"
-               alt="Glossy black mug and detailed polyhedral dice representing the Drinks & Dragons guild newsletter" width="1000" height="562" />
-          <figcaption>Never miss a quest or a game night.</figcaption>
-        </figure>
-
-        <form id="newsForm" action="#" method="post" novalidate>
-          <div class="form-field">
-            <label for="news-email">Email</label>
-            <input id="news-email" name="news-email" type="email" autocomplete="email" required />
-            <span class="error" id="news-error" role="alert" aria-live="polite"></span>
-          </div>
-          <button type="submit" class="button button-outline-red">Sign Up</button>
-          <p class="success" id="news-success" aria-live="polite" hidden>Thanks for joining the guild!</p>
-          <p class="fineprint">Class demo: submissions aren’t stored.</p>
-        </form>
-      </div>
-    </section>
-
-    <!-- FIND US (CTA + external links) -->
-    <section id="findus" class="band">
-      <div class="container">
-        <h2>Find Drinks & Dragons</h2> <!-- keyword in H2 -->
-        <address>
-          123 Arcana Ave, Bloomington, IN 47401<br>
-          Open Tue–Sun · Noon–10pm
-        </address>
-        <p>
-          <a class="button button-outline-red" href="https://maps.google.com/?q=123+Arcana+Ave+Bloomington+IN" target="_blank" rel="noopener">
-            Open in Maps
-          </a>
-        </p>
-
-        <!-- at least 3 external links -->
-        <ul class="external-links list">
-          <li><a href="https://boardgamegeek.com/" target="_blank" rel="noopener">BoardGameGeek</a></li>
-          <li><a href="https://dnd.wizards.com/" target="_blank" rel="noopener">Dungeons & Dragons</a></li>
-          <li><a href="https://www.youtube.com/watch?v=VyVI7cIlY9Q" target="_blank" rel="noopener">SEO in 5 Minutes (YouTube)</a></li>
-        </ul>
+        <p><a class="button button-red" href="guild.html">Join the Guild</a></p>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER (backlink) -->
+  <!-- FOOTER (shared) -->
   <footer role="contentinfo">
     <div class="container">
       <p>&copy; <span id="year"></span> Drinks & Dragons — “Roll high, sip higher.”</p>
       <p class="fineprint">
-        Backlink: my code on GitHub —
-        <a href="https://github.com/Wmontgom1011/Drinks-Dragons-part-1.io" target="_blank" rel="noopener">Project Repository</a>.
+        Backlink: <a href="https://github.com/Wmontgom1011/Drinks-Dragons-part-1.io" target="_blank" rel="noopener">Project Repository</a>
+        • External: <a href="https://boardgamegeek.com/" target="_blank" rel="noopener">BoardGameGeek</a>,
+        <a href="https://dnd.wizards.com/" target="_blank" rel="noopener">Dungeons & Dragons</a>,
+        <a href="https://www.youtube.com/watch?v=VyVI7cIlY9Q" target="_blank" rel="noopener">SEO in 5 Minutes</a>
       </p>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
