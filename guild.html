@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guild – Drinks & Dragons Café</title>
+  <meta name="description" content="Join the Drinks & Dragons Guild for tabletop perks, event reservations, and early access to exclusive game nights in Bloomington." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER (shared) -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header role="banner">
+    <div class="container header-wrap">
+      <a class="logo" href="index.html" aria-label="Drinks & Dragons home">
+        <img src="images/drinks-dragons-logo.png" width="180" height="48"
+             alt="Drinks & Dragons logo — flat crimson lettering with dragon beneath Dragons">
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="guild.html" aria-current="page">Guild</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="band">
+      <div class="container">
+        <h1>Join the Drinks & Dragons Guild</h1>
+        <p>Become a Guild Member to unlock exclusive perks and game-night privileges.</p>
+
+        <h2>Guild Perks</h2>
+        <ul class="list">
+          <li>Priority reservations for board game tables</li>
+          <li>Discounted drinks and snacks</li>
+          <li>Access to Guild-exclusive one-shots</li>
+          <li>Monthly newsletter with event previews</li>
+        </ul>
+
+        <h2>Sign Up</h2>
+        <form id="guildForm" class="form" action="submit-form.php" method="post">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required aria-required="true" />
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required aria-required="true" />
+
+          <label for="favgame">Favorite Game:</label>
+          <input type="text" id="favgame" name="favgame" />
+
+          <label for="message">Message or Questions:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit" class="button button-red">Join the Guild</button>
+        </form>
+
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (shared) -->
+  <footer role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Drinks & Dragons — “Roll high, sip higher.”</p>
+      <p class="fineprint">
+        Backlink: <a href="https://github.com/Wmontgom1011/Drinks-Dragons-part-1.io" target="_blank" rel="noopener">Project Repository</a>
+        • External: <a href="https://boardgamegeek.com/" target="_blank" rel="noopener">BoardGameGeek</a>,
+        <a href="https://dnd.wizards.com/" target="_blank" rel="noopener">Dungeons & Dragons</a>,
+        <a href="https://www.youtube.com/watch?v=VyVI7cIlY9Q" target="_blank" rel="noopener">SEO in 5 Minutes</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
